@@ -8,15 +8,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4  
       
-      - name: Set up Python 3.10
+      - name: Instalacion de python 3.12.2
         uses: actions/setup-python@v4
         with:
           python-version: "3.12.2"
           
-      - name: Install dependencies
+      - name: Instalar dependencias
         run: |
           pip install -r requirements.txt
           
-      - name: Run tests with pytest
+      - name: Correr pruebas con pytest
         run: |
           pytest tests/ -v  # Ejecuta todas las pruebas
